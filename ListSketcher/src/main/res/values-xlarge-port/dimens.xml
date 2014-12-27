@@ -1,0 +1,32 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="navigation_drawer_width">380dp</dimen>
+    <dimen name="prof_pic_dim">100dp</dimen>
+
+    <!-- Main List View -->
+    <dimen name="main_list_item_height">54dp</dimen>
+    <dimen name="main_list_title">22sp</dimen>
+    <dimen name="main_list_item">22sp</dimen>
+    <dimen name="main_list_day">18sp</dimen>
+    <dimen name="main_list_top_margin">54dp</dimen>
+
+    <!-- Detail List View -->
+    <dimen name="detail_list_item_height">54dp</dimen>
+    <dimen name="detail_list_title_height">52dp</dimen>
+    <dimen name="detail_list_title">26sp</dimen>
+    <dimen name="detail_list_item">22sp</dimen>
+    <dimen name="detail_list_top_margin">54dp</dimen>
+
+    <!-- Add list activity dimens -->
+    <dimen name="add_list_title">26dp</dimen>
+
+    <dimen name="action_bar_size">52dp</dimen>
+
+    <!-- Open list dimens-->
+    <dimen name="open_list_title">22sp</dimen>
+    <dimen name="open_list_author">16sp</dimen>
+    <dimen name="open_list_title_height">40dp</dimen>
+</resources>

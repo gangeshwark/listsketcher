@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="third_category"
+        android:title="Reminder &amp; Notification">
+
+        <RingtonePreference
+            android:key="notifications_ringtone"
+            android:title="@string/pref_title_ringtone"
+            android:ringtoneType="notification"
+            android:summary="Change notification ringtone"
+            android:defaultValue="content://settings/system/notification_sound" />
+
+        <CheckBoxPreference
+            android:key="vibrate"
+            android:title="Vibrate"
+            android:summaryOn="Vibrate ON"
+            android:summaryOff="Vibrate OFF"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="first_category"
+        android:title="Backup &amp; Sync">
+
+        <SwitchPreference
+            android:key="sync"
+            android:title="Sync"
+            android:summary="Touch to Turn Sync ON/OFF"
+            android:defaultValue="true"/>
+        <ListPreference
+            android:summary="Everyday"
+            android:key="sync_frequency"
+            android:positiveButtonText="Okay"
+            android:negativeButtonText="Cancel"
+            android:title="Sync Frequency"
+            android:dialogTitle="Sync Frequency"
+            android:entries="@array/sync_freque_titles"
+            android:entryValues="@array/sync_freque_values"
+            android:dependency="sync"/>
+        <Preference
+            android:key="manual_sync"
+            android:title="Manual Sync"
+            android:summary="Touch to start manual sync!"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="second_category"
+        android:title="Reporting">
+
+        <CheckBoxPreference
+            android:key="acra.enable"
+            android:title="Crash Reporting"
+            android:summaryOn="App Crash Reporting Enabled"
+            android:summaryOff="App Crash Reporting Disabled"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="acra.syslog.enable"
+            android:dependency="acra.enable"
+            android:summaryOn="System Logs Included"
+            android:summaryOff="System Logs Not Included"
+            android:title="Include System Logs"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="acra.deviceid.enable"
+            android:dependency="acra.enable"
+            android:title="Device ID"
+            android:summaryOn="Device ID included in the report"
+            android:summaryOff="Device ID not included in the report"
+            android:defaultValue="true"/>
+        <EditTextPreference
+            android:key="acra.user.email"
+            android:dependency="acra.enable"
+            android:title="E-mail ID"
+            android:summary="Enter your email id to include in reports"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

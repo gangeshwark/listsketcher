@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/detail_list_item_height"
+    android:background="@drawable/apptheme_list_selector_holo_light"
+    android:orientation="vertical">
+    <!-- list id / Hidden by default -->
+    <TextView
+        android:id="@+id/list_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/detail_list_item_height"
+        android:gravity="center_vertical"
+        android:paddingRight="40dp"
+        android:textColor="@color/list_item_title"
+        android:textSize="@dimen/main_list_item"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/detail_list_item_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/list_title"
+        android:gravity="center_vertical|right"
+        android:textSize="@dimen/main_list_day"
+        android:typeface="serif" />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shwavan.daysketcher.lists.ViewLists" >
+
+    <item android:id="@+id/add_list"
+        android:title="Add List"
+        android:icon="@drawable/ic_add_list_item"
+        app:showAsAction="withText|always" />
+
+    <item android:id="@+id/refresh"
+        android:title="Refresh Lists"
+        android:icon="@drawable/ic_refresh"
+        app:showAsAction="withText|always"/>
+    <item android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="withText|ifRoom"/>
+<!--    <item android:id="@+id/help"
+        android:title="Help"
+        android:icon="@drawable/ic_help"
+        app:showAsAction="ifRoom"/>-->
+</menu>

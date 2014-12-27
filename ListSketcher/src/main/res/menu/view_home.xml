@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shwavan.daysketcher.home.ViewHome" >
+
+    <item android:id="@+id/add_list"
+        android:title="Add List"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_add_list_item"
+        app:showAsAction="always|withText" />
+
+</menu>

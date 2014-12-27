@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/detail_list_item_height"
+    android:background="@drawable/apptheme_list_selector_holo_light"
+    android:orientation="vertical">
+    <!-- item id / Hidden by default -->
+    <TextView
+        android:id="@+id/list_item_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/imp_but"
+        style="@android:style/MediaButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+    <!-- android:src="@drawable/ic_not_imp" -->
+    <CheckedTextView
+        android:id="@+id/item_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/detail_list_item_height"
+        android:layout_alignParentEnd="false"
+        android:layout_toRightOf="@+id/imp_but"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:paddingRight="40dp"
+        android:text="name"
+        android:textColor="@color/list_item_title"
+        android:textSize="@dimen/detail_list_item"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+
+    <!--<TextView
+        android:id="@+id/item_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/list_item_title"
+        android:gravity="center_vertical"
+        android:paddingRight="40dp"
+        android:text="name"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="false"
+        android:layout_toRightOf="@+id/imp_but" />-->
+    <TextView
+        android:id="@+id/item_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

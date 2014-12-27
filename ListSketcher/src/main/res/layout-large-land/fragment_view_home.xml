@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg_plain"
+    android:orientation="horizontal"
+    android:paddingTop="60dp"
+    android:baselineAligned="false"
+    android:divider="@color/list_divider"
+    android:dividerPadding="20dp"
+    android:textAlignment="center"
+    android:showDividers="middle">
+
+
+    <LinearLayout
+        android:id="@+id/left_pane"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Hey!"
+            android:textColor="@color/common_signin_btn_default_background"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:paddingLeft="10dp" />
+
+        <ImageView
+            android:id="@+id/profPic"
+            android:layout_width="384dp"
+            android:layout_height="384dp"
+            android:layout_below="@+id/welcome"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="Profile Pic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:measureWithLargestChild="false"
+        android:longClickable="false"
+        android:importantForAccessibility="yes"
+        android:textAlignment="center"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+
+        <Button
+            android:id="@+id/addListHome"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/but_selector"
+            android:drawableLeft="@drawable/ic_add_list_black"
+            android:text="@string/add_list_home"
+            android:longClickable="false"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_margin="10dp"
+            android:enabled="true"
+            android:height="70dp"
+            android:shadowColor="#000000"
+            android:typeface="serif"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/viewListHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:buttonBarButtonStyle"
+            android:background="@drawable/but_selector"
+            android:drawableLeft="@drawable/ic_lists_black"
+            android:text="@string/view_list_home"
+            android:layout_margin="10dp"
+            android:enabled="true"
+            android:height="70dp"
+            android:shadowColor="#000000"
+            android:typeface="serif"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/aboutBut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:buttonBarButtonStyle"
+            android:background="@drawable/but_selector"
+            android:drawableLeft="@drawable/ic_about_black"
+            android:text="@string/about"
+            android:layout_margin="10dp"
+            android:enabled="true"
+            android:height="70dp"
+            android:shadowColor="#000000"
+            android:typeface="serif"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/rateBut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:buttonBarButtonStyle"
+            android:background="@drawable/but_selector"
+            android:drawableLeft="@drawable/ic_rate_black"
+            android:text="@string/rate_home"
+            android:layout_margin="10dp"
+            android:enabled="true"
+            android:height="70dp"
+            android:shadowColor="#000000"
+            android:typeface="serif"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/adLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/scroll_view">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/adMobId"
+            android:layoutMode="opticalBounds" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shwavan.daysketcher.lists.AddListActivity" >
+
+    <item android:id="@+id/save_but"
+        android:title="Save"
+        android:icon="@drawable/ic_save"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText" />
+
+    <item android:id="@+id/disc_but"
+        android:title="Cancel"
+        android:icon="@drawable/ic_discard"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText" />
+
+
+
+</menu>

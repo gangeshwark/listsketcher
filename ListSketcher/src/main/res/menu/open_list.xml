@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shwavan.listsketcher.lists.OpenList" >
+    
+    <item android:id="@+id/save_list"
+        android:title="@string/action_save"
+        android:icon="@drawable/ic_save_list"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/close_window"
+        android:title="@string/action_save"
+        android:icon="@drawable/ic_close_list"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom" />
+</menu>

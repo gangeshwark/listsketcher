@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shwavan.daysketcher.lists.ListsDetailActivity">
+
+    <item
+        android:id="@+id/action_share_list"
+        android:icon="@drawable/ic_share"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:title="Share"
+        app:showAsAction="always|withText">
+        <menu>
+            <item
+                android:id="@+id/share_as_text"
+                android:icon="@drawable/ic_share"
+                android:showAsAction="collapseActionView"
+                android:title="Share as Text" />
+            <item
+                android:id="@+id/share_as_list"
+                android:icon="@drawable/ic_share"
+                android:title="Share as List" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/ic_edit"
+        android:orderInCategory="100"
+        android:title="Edit"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/ic_delete"
+        android:orderInCategory="100"
+        android:title="Delete List"
+        app:showAsAction="always|withText" />
+
+</menu>

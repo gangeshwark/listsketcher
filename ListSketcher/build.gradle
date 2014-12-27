@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion '20'
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 20
+        versionCode 10
+        versionName "3.1"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("key/listsketcher.jks")
+            storePassword "listsketcher"
+            keyAlias "listsketcher"
+            keyPassword "listsketcher"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            runProguard true
+        }
+    }
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/acra-4.5.0.jar')
+    compile 'com.android.support:support-v4:20.+'
+    compile 'com.android.support:appcompat-v7:20.+'
+    compile 'com.android.support:gridlayout-v7:20.+'
+    compile 'com.google.android.gms:play-services:5.2.08'
+    compile files('libs/Parse-1.5.1.jar')
+//    compile ('de.keyboardsurfer.android.widget:crouton:1.8.4') {
+//        exclude group: 'com.google.android', module: 'support-v4'
+//    }
+
+}

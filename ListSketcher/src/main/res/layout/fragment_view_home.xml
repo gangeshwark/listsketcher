@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="48dp"
+    android:background="@drawable/app_bg_plain"
+    tools:context="com.shwavan.daysketcher.home.ViewHome">
+
+    <LinearLayout
+        android:id="@+id/welcome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welText"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/common_signin_btn_default_background" />
+
+        <ImageView
+            android:id="@+id/profPic"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="Profile Pic" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_lay"
+            android:layout_alignParentLeft="true">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/addListHome"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/but_selector"
+                    android:drawableLeft="@drawable/ic_add_list_black"
+                    android:longClickable="false"
+                    android:text="Add New" />
+
+                <Button
+                    android:id="@+id/viewListHome"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/but_selector"
+                    android:drawableLeft="@drawable/ic_lists_black"
+                    android:text="@string/view_list_home" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/aboutBut"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/but_selector"
+                    android:drawableLeft="@drawable/ic_about_black"
+                    android:text="@string/about" />
+
+                <Button
+                    android:id="@+id/rateBut"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/but_selector"
+                    android:drawableLeft="@drawable/ic_rate_black"
+                    android:text="@string/rate_home" />
+            </TableRow>
+
+        </TableLayout>
+        <LinearLayout
+            android:id="@+id/adLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_alignBottom="@+id/tab_lay">
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="@string/adMobId"
+                android:layout_gravity="center|bottom" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
